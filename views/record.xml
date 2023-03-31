@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_rec_counts_form" model="ir.ui.view">
+            <field name="name">rec.counts.form</field>
+            <field name="model">rec.counts</field>
+            <field name="arch" type="xml">
+                <form string="${object.add_date}">
+                    <header>
+                        <button name="action_send_mail" string="Send Mail" class="oe_highlight"
+                                data-hotkey="m" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+<!--                            <field name="sale_module"/>-->
+<!--                            <field name="purchase_module"/>-->
+<!--                            <field name="inventory_requisition_module"/>-->
+<!--                            <field name="inventory_adjustment_module"/>-->
+<!--                            <field name="advance_expenses_module"/>-->
+<!--                            <field name="general_expenses_module"/>-->
+<!--                            <field name="cashbook_payment_module"/>-->
+<!--                            <field name="cashbook_receipt_module"/>-->
+<!--                            <field name="customer_payment_module"/>-->
+<!--                            <field name="customer_receipt_module"/>-->
+                            <field name="autoparts_unit"/>
+                            <field name="construct_Project"/>
+                            <field name="construct_mmm"/>
+                            <field name="ho_unit"/>
+                            <field name="autoparts_pyay"/>
+                            <field name="autoparts_mdy"/>
+                            <field name="ho_tms"/>
+                            <field name="machine_services"/>
+                            <field name="agri_m"/>
+                            <field name="agir_p"/>
+                            <field name="machinery_rents"/>
+                            <field name="logistics"/>
+                            <field name="hydropower"/>
+                            <field name="ho_gold"/>
+                            <field name="ho_toyota"/>
+                            <field name="mining"/>
+                            <field name="add_date"/>
+                            <field name="total_records" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+
+    <record id="view_rec_counts_tree" model="ir.ui.view">
+            <field name="name">rec.counts.tree</field>
+            <field name="model">rec.counts</field>
+            <field name="arch" type="xml">
+                <tree>
+<!--                    <field name="sale_module"/>-->
+<!--                    <field name="purchase_module"/>-->
+<!--                    <field name="inventory_requisition_module"/>-->
+<!--                    <field name="inventory_adjustment_module"/>-->
+<!--                    <field name="advance_expenses_module"/>-->
+<!--                    <field name="general_expenses_module"/>-->
+<!--                    <field name="cashbook_payment_module"/>-->
+<!--                    <field name="cashbook_receipt_module"/>-->
+<!--                    <field name="customer_payment_module"/>-->
+<!--                    <field name="customer_receipt_module"/>-->
+
+                    <field name="add_date"/>
+                    <field name="total_records"  />
+                    <field name="autoparts_unit"/>
+                    <field name="construct_Project"/>
+                    <field name="construct_mmm"/>
+                    <field name="ho_unit"/>
+                    <field name="autoparts_pyay"/>
+                    <field name="autoparts_mdy"/>
+                    <field name="ho_tms"/>
+<!--                    <field name="machine_services"/>-->
+<!--                    <field name="agri_m"/>-->
+<!--                    <field name="agir_p"/>-->
+<!--                    <field name="mining"/>-->
+<!--                    <field name="machinery_rents"/>-->
+<!--                    <field name="logistics"/>-->
+<!--                    <field name="hydropower"/>-->
+<!--                    <field name="ho_gold"/>-->
+<!--                    <field name="ho_toyota"/>-->
+                </tree>
+            </field>
+    </record>
+
+
+    <record id="view_rec_counts_graph" model="ir.ui.view">
+        <field name="name">rec.counts.graph</field>
+        <field name="model">rec.counts</field>
+        <field name="arch" type="xml">
+            <graph string="Project Team Graph">
+                <field name="total_records" type="measure" />
+                <field name="add_date"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_record" model="ir.actions.act_window">
+                <field name="name">Records Creation</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">rec.counts</field>
+                <field name="view_mode">tree,form,graph</field>
+    </record>
+
+<!--    <record id="import_records_action" model="ir.actions.server">-->
+<!--        <field name="name">Import Records</field>-->
+<!--        <field name="type">ir.actions.server</field>-->
+<!--        <field name="model_id" ref="upcoming_record_counts.model_rec_counts"/>-->
+<!--        <field name="state">code</field>-->
+<!--        <field name="code">model.import_rec_counts()</field>-->
+<!--    </record>-->
+
+
+</odoo>
+

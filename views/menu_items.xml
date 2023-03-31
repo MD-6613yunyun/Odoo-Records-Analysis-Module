@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_record_root" name="Records Analysis"   sequence="15" action="action_record"/>
+    <menuitem id="automate_import_data"  name="Import Data" sequence="10"  parent="menu_record_root"/>
+
+</odoo>

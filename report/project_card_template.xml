@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_project_id_card">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                    Hello! How are you?
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
+
+

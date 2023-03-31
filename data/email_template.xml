@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Email template for records counts -->
+        <record id="template_records_email" model="mail.template">
+            <field name="name">Email Template for Records</field>
+            <field name="model_id" ref="model_rec_counts"/>
+            <field name="subject">Record Creations Analysis</field>
+            <field name="email_from">yunyun.mdmm@gmail.com</field>
+            <field name="email_to">Bobo@mudonmaungmaung.com</field>
+            <field name="body_html">
+        <![CDATA[
+        <html>
+          <head>
+            <style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			font-size: 32px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 0 0 20px rgba(0,0,0,0.1);
+			margin-bottom: 30px;
+		}
+		th, td {
+			padding: 10px;
+			text-align: center;
+			border: 1px solid #ddd;
+		}
+		th {
+			background-color: #f2f2f2;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		td {
+			font-size: 16px;
+		}
+		.notification {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  margin: 0;
+  font-weight: bold;
+}
+
+.time {
+  margin: 0;
+  font-size: 12px;
+  color: #666666;
+  margin-left: auto;
+}
+
+	</style>
+</head>
+<body>
+	<h1>${object.add_date} Report </h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Business Unit</th>
+				<th>Record Counts</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Autoparts Unit</td>
+				<td>${object.autoparts_unit}</td>
+			</tr>
+			<tr>
+				<td>Autoparts Unit Pyay</td>
+				<td>${object.autoparts_pyay}</td>
+			</tr>
+			<tr>
+				<td>Autoparts Unit Mandalay</td>
+				<td>${object.autoparts_mdy}</td>
+			</tr>
+			<tr>
+				<td>Construction Project Unit</td>
+				<td>${object.construct_Project}</td>
+			</tr>
+			<tr>
+				<td>Construction Mudon Maung Maung</td>
+				<td>${object.construct_mmm}</td>
+			</tr>
+			<tr>
+				<td>Construciton TMS</td>
+				<td>${object.ho_tms}</td>
+			</tr>
+			<tr>
+				<td>Logistics</td>
+				<td>${object.logistics}</td>
+			</tr>
+			<tr>
+				<td>Agriculture Unit ( Plantation ) </td>
+				<td>${object.agir_p}</td>
+			</tr>
+			<tr>
+				<td>Agriculture Unit ( Machine ) </td>
+				<td>${object.agri_m}</td>
+			</tr>
+			<tr>
+				<td>Machinery Services & Parts</td>
+				<td>${object.machine_services}</td>
+			</tr>
+			<tr>
+				<td>Machinery Rental Service</td>
+				<td>${object.machinery_rents}</td>
+			</tr>
+			<tr>
+				<td>Hydropower</td>
+				<td>${object.hydropower}</td>
+			</tr>
+			<tr>
+				<td>HO - Gold Mining</td>
+				<td>${object.ho_gold}</td>
+			</tr>
+			<tr>
+				<td>HO - Toyota MDMM </td>
+				<td>${object.ho_toyota}</td>
+			</tr>
+			<tr>
+				<td>Mining Unit</td>
+				<td>${object.mining}</td>
+			</tr>
+			<tr>
+				<td>Total Records </td>
+				<td>${object.total_records}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="notification">
+          <p class="message"> Be aware that some features and data are not included in this email....</p>
+          <br/><p class="time"> But the developer will add the essential features as fast as he can.. </p>
+    </div>
+          </body>
+        </html>
+        ]]>
+      </field>
+    </record>
+  </data>
+</odoo>
